@@ -798,45 +798,67 @@
                     <input class=form-control id=prN placeholder="Enter app name...">
                 </div>
                 <div class="container">
-                    <p>Business Process:</p>
+                    <p style="font-weight: bold;">Business Templates:</p>
                     <form action="/action_page.php">
-                      <div class="form-check">
-                        <label class="form-check-label" for="check1">
-                          <input type="checkbox" class="form-check-input" disabled>Lead to cash
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label" for="check2">
-                          <input class=form-check-input id=check1 type=checkbox name=option1 onclick=ShowERP() value=something>Design to operate
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" disabled>Source to pay
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label">
-                          <input type="checkbox" class="form-check-input" disabled>Workforce Management
-                        </label>
-                      </div>    
+                        <div class="form-check">
+                          <label class="form-check-label" for="check1">
+                            <input type="checkbox" class="form-check-input" disabled>Production Dashboard
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label" for="check2">
+                            <input class=form-check-input  type=checkbox >Work instruction & completion tracking
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" disabled>Inspection & quality checks
+                          </label>
+                        </div>
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" disabled>Operater training
+                          </label>
+                        </div>  
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" disabled>Machine monitoring
+                          </label>
+                        </div>   
+                        <div class="form-check">
+                          <label class="form-check-label">
+                            <input type="checkbox" class="form-check-input" disabled>Auditing
+                          </label>
+                        </div> 
+                      </form>
+                </div>
+                <div class="container">
+                    <p style="margin-top: 10px;font-weight: bold;">Build from Scratch:</p>
+                    <form >
+                        <div class="form-check">
+                            <label class="form-check-label" for="check2">
+
+                               <input class=form-check-input id=check1 type=checkbox name=option1 onclick=ShowERP() value=something>Build from idea
+                            </label>
+                        </div>
                     </form>
-                  </div>
-                  <div class="container">
-                    <p style="margin-top: 10px;">External Sources:</p>
+                </div>
+                <div class="container">
+                    <p style="margin-top: 10px;font-weight: bold;">External Sources:</p>
                     <form action="/action_page.php">
-                      <div class="form-check">
-                        <label class="form-check-label" for="check1">
-                          <input class=form-check-input id=check2 type=checkbox name=option2 onclick=ShowExcel() value=something>Spreadsheet
-                        </label>
-                      </div>
-                      <div class="form-check">
-                        <label class="form-check-label" for="check2">
-                          <input type="checkbox" class="form-check-input" disabled>Google Sheets
-                        </label>
-                      </div>   
+                        <div class="form-check">
+                            <label class="form-check-label" for="check1">
+                                <input class=form-check-input id=check2 type=checkbox name=option2
+                                    onclick=ShowExcel() value=something>Spreadsheet
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label" for="check2">
+                                <input type="checkbox" class="form-check-input" disabled>Google Sheets
+                            </label>
+                        </div>
                     </form>
-                  </div>
+                </div>
                 <div class=wrapper-erpBlock id=erp style=display:none>
                     <div class=form-group>
                         <label style="margin-top: 10px;" for=usr>Enter the business process:</label>

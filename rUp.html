@@ -721,11 +721,14 @@
 				var oT = this.getView().byId("idTableUp");
 				var oF = this.getView().byId("idfilter");
 				var aC = [], oX;
-				 for ( var i = 0; i < aData.length; i++) {
-                   oT.addColumn(new sap.m.Column({minScreenWidth:"Tablet", demandPopin:true, header: new sap.m.Text({text:Object.keys(aData[i])[i]})}));
-				   oF.addFilterItem(new sap.ui.comp.filterbar.FilterItem({name:i+"ch", label:Object.keys(aData[i])[i], control : new sap.m.Input()}));
-				     
-				 }
+				// for ( var i = 0; i < aData.length; i++) {
+					if(aData.length !== 0){
+
+					for ( var j = 0; j < Object.keys(aData[0]).length; j++) { 
+                   oT.addColumn(new sap.m.Column({minScreenWidth:"Tablet", demandPopin:true, header: new sap.m.Text({text:Object.keys(aData[0])[j]})}));
+				   oF.addFilterItem(new sap.ui.comp.filterbar.FilterItem({name:j+"ch", label:Object.keys(aData[0])[j], control : new sap.m.Input()}));
+					} 
+				// }
 				     for ( var i = 0; i < Object.keys(aData[0]).length; i++) {
 						 oX = new sap.m.Text({text: "{" +Object.keys(aData[0])[i]+ "}"});
 						 aC.push(oX);
@@ -737,6 +740,8 @@
 						cells: aC
 					})
 				});
+										
+				}
 				
                 var oModel = new sap.ui.model.json.JSONModel();
                 oModel.setData(aData);
