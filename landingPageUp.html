@@ -1,5 +1,5 @@
 <!doctypehtml>
-<html lang=en>
+    <html lang=en>
     <meta charset=UTF-8>
     <meta content="width=device-width,initial-scale=1" name=viewport>
     <link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css rel=stylesheet>
@@ -10,8 +10,9 @@
     <script src=indexUp.js></script>
     <title>Document</title>
     <style>
-        body,html {
-            font-family: Verdana,sans-serif;
+        body,
+        html {
+            font-family: Verdana, sans-serif;
             font-size: 15px;
             line-height: 1.5;
             background-color: #f7f7f7
@@ -71,7 +72,7 @@
         }
 
         [hidden] {
-            display: none!important
+            display: none !important
         }
 
         .wrapper-uploader {
@@ -100,7 +101,8 @@
         }
     </style>
     <ul>
-        <button class="btn btn-primary" type=button onclick=onB() style=float:left;margin-top:7px;margin-left:10px>Back</button>
+        <button class="btn btn-primary" type=button onclick=onB()
+            style=float:left;margin-top:7px;margin-left:10px>Back</button>
         <li style=pointer-events:none>
             <a>CustomRapid build board</a>
     </ul>
@@ -108,7 +110,7 @@
         <div>
             <div class="panel panel-default">
                 <div class=panel-heading style=font-weight:bolder id=pah>Project Name -</div>
-                <div class=panel-body style=height:470px>
+                <div class=panel-body style=height:700px>
                     <div class=wrapper-uploader>
                         <p style=margin-bottom:20px>Import Spreadsheet:</p>
                         <label class="btn btn-primary">
@@ -118,95 +120,190 @@
                             <i class=material-icons>grid_on</i>
                         </button>
                         <div class="progress wrapper-progress">
-                            <div class=progress-bar style=width:0% id=idProgressBar aria-valuemax=100 aria-valuemin=0 aria-valuenow=40 role=progressbar>0%</div>
+                            <div class=progress-bar style=width:0% id=idProgressBar aria-valuemax=100 aria-valuemin=0
+                                aria-valuenow=40 role=progressbar>0%</div>
                         </div>
                     </div>
-                    <div class=wrapper-views style=visibility:hidden id=idViews>
-                        <div class="container" style=" width: 200px; padding-left: 0px; margin-left: 0px; margin-top: 10px;">
+                    <!--
+                    <div class=wrapper-views style=visibility:hidden;display:none id=idViews1>
+                        <div class="container"
+                            style=" width: 200px; padding-left: 0px; margin-left: 0px; margin-top: 10px;">
                             <div class="panel-group" id="accordion">
-                              <div class="panel panel-default" style="border-color: white; border: 0px;">
-                                <div class="panel-heading" style="background-color: white;border-color: white;padding: 0px;">
-                                  <h4 class="panel-title">
-                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                      Rapid View <span class="glyphicon glyphicon-triangle-bottom"></span></button>
-                                  </h4>
-                                </div>
-                                <div id="collapse1" class="panel-collapse collapse">
-<div class="container-fluid">
-  <div class="row" style="margin-left: -30px;">
-    <div class="col-sm-2" style="margin-top:10px;">
-    	<button class="btn btn-default" type="button" style="color:#007bff;width:120px" onclick="showFrameListWeb()">
-        <span style="float:left" class="glyphicon glyphicon-th-list"></span>List</button>
-    </div>
-  </div>
-    <div class="row" style="margin-left: -30px;">
-    <div class="col-sm-2" style="margin-top:10px;">
-		<button class="btn btn-default" type=button style="color:#007bff;width:120px" id="ListBtn"  onclick=showFrameAnalytics() disabled>
-        <span style="float:left" class="glyphicon glyphicon-object-align-right"></span> Analytical</button>
-    </div>
-  </div>
-      <div class="row" style="margin-left: -30px;">
-    <div class="col-sm-2" style="margin-top:10px;">
- 		<button class="btn btn-default" type=button style="color:#007bff;width:120px" id="ListBtn"  onclick=showFormWeb() disabled>
-        <span style="float:left" class="glyphicon glyphicon-list-alt"></span> Forms</button>
-    </div>
-  </div>
-      <div class="row" style="margin-left: -30px;">
-    <div class="col-sm-2" style="margin-top:10px;">
-         <button class="btn btn-default" type=button style="color:#007bff;width:120px" id="ListBtn"  onclick=showFrameKanban() disabled>
-         <span style="float:left" class="glyphicon glyphicon-th"></span>Status</button>
-    </div>
-  </div>
-  <div class="row" style="margin-left: -30px;">
-    <div class="col-sm-2" style="margin-top:10px;margin-bottom: 10px;">
-         <button class="btn btn-default" type=button style="color:#007bff;width:120px" id="ListBtn" disabled>
-            <i style="float:left" class="fa fa-list-ul"></i></span>Details</button>
-    </div>
-</div>
-</div>
-                                </div>
-                              </div>
-                              
-                                 <div class="panel panel-default" style="border-color: white; border: 0px; margin-top: 10px;" >
-                                <div class="panel-heading" style="background-color: white;border-color: white;padding: 0px;">
-                                  <h4 class="panel-title">
-                                     <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-                                      Rapid Components<span class="glyphicon glyphicon-triangle-bottom"></span></button>
-                                  </h4>
-                                </div>
-                                <div id="collapse2" class="panel-collapse collapse">
-                                    <div class="container-fluid">
-                                        <div class="row" style="margin-left: -30px;">
-                                          <div class="col-sm-2" style="margin-top:10px;">
-                                              <button class="btn btn-default" type="button" style="color:#007bff;width:170px">
-                                              <span style="float:left" class="glyphicon glyphicon-barcode"></span>BarCode Scanner</button>
-                                          </div>
-                                        </div>
-                                          <div class="row" style="margin-left: -30px;">
-                                          <div class="col-sm-2" style="margin-top:10px;">
-                                              <button class="btn btn-default" type=button style="color:#007bff;width:170px" id="ListBtn">
-                                                <i style="float:left" class="fa fa-hacker-news"></i>News Feeds</button>
-                                          </div>
-                                        </div>
-                                            <div class="row">
-                                          <div class="col-sm-2" style="margin-top:10px;"></div>
-                                               <button class="btn btn-default" type=button style="color:#007bff;width:170px" id="ListBtn">
-                                              <span style="float:left" class="glyphicon glyphicon-qrcode"></span>AR Objects</button>
-                                          </div>
-                                          <div class="row" style="margin-left: -30px;">
-                                            <div class="col-sm-2" style="margin-top:10px;">
-                                                 <button class="btn btn-default" type=button style="color:#007bff;width:170px" id="ListBtn">
-                                                  <i  style="float:left"  class="fa fa-twitter"></i>Twitter Tweeds</button>
+                                <div class="panel panel-default" style="border-color: white; border: 0px;">
+                                    <div class="panel-heading"
+                                        style="background-color: white;border-color: white;padding: 0px;">
+                                        <h4 class="panel-title">
+                                            <button type="button" class="btn btn-primary dropdown-toggle"
+                                                data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                Rapid View <span
+                                                    class="glyphicon glyphicon-triangle-bottom"></span></button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="container-fluid">
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type="button"
+                                                        style="color:#007bff;width:120px" onclick="showFrameListWeb()">
+                                                        <span style="float:left"
+                                                            class="glyphicon glyphicon-th-list"></span>List</button>
+                                                </div>
                                             </div>
-                                          </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:120px" id="ListBtn"
+                                                        onclick=showFrameAnalytics() disabled>
+                                                        <span style="float:left"
+                                                            class="glyphicon glyphicon-object-align-right"></span>
+                                                        Analytical</button>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:120px" id="ListBtn"
+                                                        onclick=showFormWeb() disabled>
+                                                        <span style="float:left"
+                                                            class="glyphicon glyphicon-list-alt"></span> Forms</button>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:120px" id="ListBtn"
+                                                        onclick=showFrameKanban() disabled>
+                                                        <span style="float:left"
+                                                            class="glyphicon glyphicon-th"></span>Status</button>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;margin-bottom: 10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:120px" id="ListBtn" disabled>
+                                                        <i style="float:left"
+                                                            class="fa fa-list-ul"></i></span>Details</button>
+                                                </div>
+                                            </div>
                                         </div>
-                                      </div>
+                                    </div>
                                 </div>
-                              </div>
-                              
-                              
+
+                                <div class="panel panel-default"
+                                    style="border-color: white; border: 0px; margin-top: 10px;">
+                                    <div class="panel-heading"
+                                        style="background-color: white;border-color: white;padding: 0px;">
+                                        <h4 class="panel-title">
+                                            <button type="button" class="btn btn-primary dropdown-toggle"
+                                                data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                Rapid Components<span
+                                                    class="glyphicon glyphicon-triangle-bottom"></span></button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div class="container-fluid">
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type="button"
+                                                        style="color:#007bff;width:170px">
+                                                        <span style="float:left"
+                                                            class="glyphicon glyphicon-barcode"></span>BarCode
+                                                        Scanner</button>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:170px" id="ListBtn">
+                                                        <i style="float:left" class="fa fa-hacker-news"></i>News
+                                                        Feeds</button>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-2" style="margin-top:10px;"></div>
+                                                <button class="btn btn-default" type=button
+                                                    style="color:#007bff;width:170px" id="ListBtn">
+                                                    <span style="float:left"
+                                                        class="glyphicon glyphicon-qrcode"></span>AR Objects</button>
+                                            </div>
+                                            <div class="row" style="margin-left: -30px;">
+                                                <div class="col-sm-2" style="margin-top:10px;">
+                                                    <button class="btn btn-default" type=button
+                                                        style="color:#007bff;width:170px" id="ListBtn">
+                                                        <i style="float:left" class="fa fa-twitter"></i>Twitter
+                                                        Tweeds</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        <button class="btn btn-primary" type=button style=float:left data-target=#settingsModal data-toggle=modal>Advanced Settings</button>
+
+
+                        </div>
+                        <button class="btn btn-primary" type=button style=float:left data-target=#settingsModal
+                            data-toggle=modal>Advanced Settings</button>
+                    </div>
+                    -->
+
+                    <div class=wrapper-views  id=idViews>
+                        <div class="container"
+                            style=" width: 200px; padding-left: 0px; margin-left: 0px; margin-top: 10px;">
+                            <div class="panel-group" id="accordion">
+                                <div class="panel panel-default" style="border-color: white; border: 0px;">
+                                    <div class="panel-heading"
+                                        style="background-color: white;border-color: white;padding: 0px;">
+                                        <h4 class="panel-title">
+                                            <button type="button" class="btn btn-primary dropdown-toggle"
+                                                data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                Steps <span class="glyphicon glyphicon-triangle-bottom"></span></button>
+                                                <button type="button" class="btn btn-primary"><span
+                                                    class="	glyphicon glyphicon-plus"></span></button>
+                                                    <button type="button" class="btn btn-primary"><span
+                                                        class="	glyphicon glyphicon-trash"></span></button>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            <div class="checkbox">
+                                           <label><input type="checkbox" onclick="showScan()" value="">Scan/Search</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 1</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 2</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 3</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 4</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 5</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Step 6</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Report Defect</label>
+                                        </div>
+                                           <div class="checkbox">
+                                           <label><input type="checkbox" value="">Get Help</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" type=button style=float:left data-target=#settingsModal
+                        data-toggle=modal>Map Shopfloor</button>
+                        <button class="btn btn-primary" type=button style=float:left;margin-top:10px; data-target=#settingsModal
+                        data-toggle=modal>Create AR/VR</button>
+                        <button class="btn btn-primary" type=button style=float:left;margin-top:10px; data-target=#settingsModal
+                            data-toggle=modal>Advanced Settings</button>
                     </div>
                 </div>
             </div>
@@ -226,11 +323,14 @@
                             <i class=material-icons>phone_iphone</i>
                         </button>
                     </div>
-                    <button class="btn btn-primary" type=button style=float:right data-target=#deployModal data-toggle=modal>Deploy</button>
-                    <button class="btn btn-primary" type=button style="float:right;margin-right: 10px;" >Marketplace</button>
+                    <button class="btn btn-primary" type=button style=float:right data-target=#deployModal
+                        data-toggle=modal>Deploy</button>
+                    <button class="btn btn-primary" type=button
+                        style="float:right;margin-right: 10px;">Marketplace</button>
                 </div>
-                <div class=panel-body style=text-align:center;height:480px>
-                    <iframe style=visibility:hidden style="margin:auto;border:1px solid #000" height=100% id=idFrame width=98%></iframe>
+                <div class=panel-body style=text-align:center;height:700px>
+                    <iframe style=visibility:hidden style="margin:auto;border:1px solid #000" height=100% id=idFrame
+                        width=98%></iframe>
                 </div>
             </div>
         </div>
@@ -252,20 +352,20 @@
                 </div>
                 <div class="container">
                     <form>
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="">Deploy to Fiori Lanchpad</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="">Deploy to Fiori Client</label>
-                      </div>
-                      <div class="checkbox">
-                        <label><input type="checkbox" value="">Deploy as independent application</label>
-                      </div>
-                          <div class="checkbox">
-                        <label><input type="checkbox" value="">Download the mobile files(apk/ipa)</label>
-                      </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Deploy to Fiori Lanchpad</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Deploy to Fiori Client</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Deploy as independent application</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Download the mobile files(apk/ipa)</label>
+                        </div>
                     </form>
-                  </div>
+                </div>
                 <div class=modal-footer>
                     <button class="btn btn-default" type=button data-dismiss=modal>Close</button>
                 </div>
